@@ -297,7 +297,7 @@ def update_nodexy(n, x, y):
 
 # **************************************************************
 def localize_nodes():
-    global node, nodexy, go, single_step
+    global node, nodexy, go, slow_steps
     n1, n2, n3 = random_big_triangle_from_node()
     update_nodexy_from_node(n1)  # 1st (x,y) values given from node n1
     update_nodexy_from_node(n2)  # 2nd (x,y) values given from node n2
@@ -315,11 +315,8 @@ def localize_nodes():
     nobad = -1
     while True:
         # time.sleep(0.1)
-        if single_step.get() == 1:
-            while True:
-                if go == False:
-                    break
-            go = True
+        if slow_steps.get() == 1:
+            time.sleep(1.0)
         r = random_big_triangle_from_nodexy(nobad)  # [p1, p2, p3, p4] where p4 unknown
         if r == None:  # all nodes localized
             for i in range(len(nodexy)):
@@ -564,12 +561,6 @@ def localize_nodes_from_n1_n2_n3(n1, n2, n3):
     return r
 
 
-# **************************************************************
-def stop_localize_nodes():
-    global auto
-    auto = False
-
-
 # Populate my nearest mynodes **********************************
 def populate_mynodes():
     global node, srcno, dstno, mynodes, txrange
@@ -719,24 +710,12 @@ def get_common_nodes3(ii, jj, kk):
 
 
 # **************************************************************
-def randomize_nodes():
-    global node, txrange, mynodes, ofsX, ofsY
-    gapx = 10
-    gapy = 10
-    wdt = screen_width - ofsX
-    hgt = screen_height - ofsY
-    for i in range(len(node)):
-        if nodexy[i][3] == 0:
-            node[i][1] = random.randrange(gapx, wdt)
-            node[i][2] = random.randrange(gapy, hgt)
-
-
-# **************************************************************
 def open_file():
     global node, nodexy, txrange
     flnm = filedialog.askopenfilename(
-        initialdir="", filetypes=(("WSN File", "*.wsn"), ("all files", "*.*")),
-        title="Load WSN file (*.wsn)"
+        initialdir="",
+        filetypes=(("WSN File", "*.wsn"), ("all files", "*.*")),
+        title="Load WSN file (*.wsn)",
     )
     file1 = open(flnm, "r")
     wrd = file1.readline().removesuffix("\n").split(",")
@@ -768,7 +747,7 @@ def save_file():
         initialfile="LocalizeHsm.txt",
         defaultextension=".txt",
         filetypes=[("All Files", "*.*"), ("WSN File", "*.wsn")],
-        title="Save WSN file (*.wsn)"
+        title="Save WSN file (*.wsn)",
     )
     file2 = open(flnm.name, "w")
     sz = len(node)  # node: [ndx][sno,x,y,pow,state]
@@ -801,7 +780,7 @@ def on_resize(event):
 
 # **************************************************************
 def main_menu():
-    global window, canvas, screen_width, screen_height, single_step
+    global window, canvas, screen_width, screen_height, slow_steps
     global gridX, gridY
 
     # window = tk.Tk()
@@ -834,15 +813,17 @@ def main_menu():
     menubar.add_cascade(label="Tool", menu=tool_menu)
 
     # Create the checkbox within the sub-menu
-    single_step = tk.IntVar()
-    single_step.set(0)
-    tool_menu.add_checkbutton(label="Single Step", variable=single_step)
+    slow_steps = tk.IntVar()
+    slow_steps.set(0)
 
     # Add options to the file menu
     file_menu.add_command(label="Max Nodes ", command=lambda: open_popup_max_nodes())
     file_menu.add_command(label="Avg Hops ", command=lambda: open_popup_average_hops())
     file_menu.add_command(label="Draw Nodes (cnt+d)", command=lambda: draw_nodes())
     file_menu.add_command(label="ReDraw Nodes (cnt+r)", command=lambda: re_draw_nodes())
+    file_menu.add_command(
+        label="Localize Nodes (cnt+z)", command=lambda: localize_nodes()
+    )
     file_menu.add_separator()
     file_menu.add_command(label="Open", command=lambda: open_file())
     file_menu.add_command(label="Save", command=lambda: save_file())
@@ -850,9 +831,7 @@ def main_menu():
     file_menu.add_command(label="Exit (cnt+x)", command=window.quit)
 
     # Add options to the tool menu
-    tool_menu.add_cascade(label="Randomize Nodes", command=lambda: randomize_nodes())
-    tool_menu.add_cascade(label="Localize Nodes", command=lambda: localize_nodes())
-    tool_menu.add_cascade(label="Stop Localize", command=lambda: stop_localize_nodes())
+    tool_menu.add_checkbutton(label="Slow", variable=slow_steps)
 
     # register the hotkey using the keyboard library
     # keyboard.add_hotkey("ctrl+n", open_popup_max_nodes)
