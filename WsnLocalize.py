@@ -3,6 +3,7 @@
 # *     A new WSN Localizing Algorithm          *
 # *                  by                         *
 # *	         Himanshu Mazumdar                  *
+# *	           Mrudang Mehta                    *
 # *	      Date Start:- 28-May-2023              *
 # *	     Update Date:- 19-June-2023             *
 # ***********************************************
