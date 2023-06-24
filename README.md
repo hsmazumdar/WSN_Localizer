@@ -17,4 +17,12 @@ Quick Start Steps:
 3. Install necessary library components in VC Code
 4. Run 'WsnLocalize.py' to popup 'WSN Localizing' application of figure-1
 5. Open 'File' menu tab and press 'Draw Nodes (Cnt+d)' tab or press 'Control + d' to populate randomly distributed nodes as shown in figure-1. The default number of nodes are 100 and can be changed using ‘Max Nodes’ tab
-6. 
+
+
+
+
+
+
+<img src="Readme_files/Localize.png">
+
+Figure-2 Simulation demonstrates WSN nodes Localization from initial three nodes of known coordinates connected using red lines. 
