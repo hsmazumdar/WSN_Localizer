@@ -18,11 +18,17 @@ Quick Start Steps:
 5. Open 'File' menu tab and press 'Draw Nodes (Cnt+d)' tab or press 'Control + d' to populate randomly distributed nodes as shown in figure-1. The default number of nodes are 100 and can be changed using ‘Max Nodes’ tab
 6. Press 'File->Localize' tab or press Cnt+z to localize all nodes as shown in figure-2
 7. Press 'File->Save' tab to open save file dialog box, select save file path and enter save file name. Press 'Save' button to save localize list of nodes as follows.
+   
 LocalizeHsm.txt,100  =>File Name, Number of nodes
+
 0,16,257,100,0       =>Serial no, x, y, state  
+
 1,20,290,100,0
+
 2,21,231,100,0
+
 .........
+
 
 
 
