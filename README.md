@@ -12,8 +12,9 @@ This Algorithm is used for a Novel Energy Efficient Routing Algorithm https://gi
 
 Quick Start Steps:
 
-Download the zip file and unzip in a folder ‘WSN_Localizer’.
-Select ‘WsnLocalize.py’ file and load in VS Code
-Install necessary library components in VC Code
-Run 'WsnLocalize.py' to popup 'WSN Localizing' application of figure-1
-Open 'File' menu tab and press 'Draw Nodes (Cnt+d)' tab or press 'Control + d' to populate randomly distributed nodes as shown in figure-1. The default number of nodes are 100 and can be changed using ‘Max Nodes’ tab
+1. Download the zip file and unzip in a folder ‘WSN_Localizer’.
+2. Select ‘WsnLocalize.py’ file and load in VS Code
+3. Install necessary library components in VC Code
+4. Run 'WsnLocalize.py' to popup 'WSN Localizing' application of figure-1
+5. Open 'File' menu tab and press 'Draw Nodes (Cnt+d)' tab or press 'Control + d' to populate randomly distributed nodes as shown in figure-1. The default number of nodes are 100 and can be changed using ‘Max Nodes’ tab
+6. 
