@@ -40,7 +40,7 @@ Using the wireless sensor network (WSN) a localizing algorithm is proposed with 
 Algorithm:
 
 1. Initialize the status of all nodes as 0.  
-2. Set the status of nodes with known positions to 1.
+2. Set the status of at least three nodes with known positions to 1.
 3. Search for four nodes, where three nodes have a status of 1 and one node has a status of 0. These nodes should be within transmission range of each other.
 4. Employ the triangulation method to estimate two sets of mirror symmetry position coordinates for the unlocalized node using two of the three known coordinate nodes.
 5. Utilize all combinations of three known coordinate nodes to estimate six sets of coordinates for the unlocalized node.
