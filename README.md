@@ -17,12 +17,10 @@ Quick Start Steps:
 4. Run 'WsnLocalize.py' to popup 'WSN Localizing' application of figure-1
 5. Open 'File' menu tab and press 'Draw Nodes (Cnt+d)' tab or press 'Control + d' to populate randomly distributed nodes as shown in figure-1. The default number of nodes are 100 and can be changed using ‘Max Nodes’ tab
 6. Press 'File->Localize' tab or press Cnt+z to localize all nodes as shown in figure-2
-7. Press 'File->Save' tab to open save file dialog box, select save file path and enter save file name. Press 'Save' button to save localize list of nodes as follows.
-   
-1. Download the zip file and unzip in a folder ‘WSN_Localizer’.
-2. Select ‘WsnLocalize.py’ file and load in VS Code
-3. Install necessary library components in VC Code
-4. 
+7. You may set 'Slow' checked using 'Tool->Slow' to new slow animation of localization 
+8. Press 'File->Save' tab to open save file dialog box, select save file path and enter save file name. Press 'Save' button to save localize list of nodes.
+9. Press 'File->Load' tab to open load file dialog box, select load file path and enter load file name. Press 'Load' button to load localize list of nodes as shown below.
+
 LocalizeHsm.txt,100  =>File Name, Number of nodes
 
 0,16,257,100,0       =>Serial no, x, y, state  
