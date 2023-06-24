@@ -31,15 +31,13 @@ LocalizeHsm.txt,100  =>File Name, Number of nodes
 
 .........
 
-
-
-
-
-
-
-
-
-
 <img src="Readme_files/Localize.png">
 
 Figure-2 Simulation demonstrates WSN nodes Localization from initial three nodes of known coordinates connected using red lines. 
+
+The proposed localizing algorithm for the wireless sensor network (WSN), the aim is to estimate the absolute global position (x,y) of all nodes from position of three initial nodes which are within transmission range to each other. 
+optimize the number of retransmissions in order to save the battery power of the nodes. Each node runs this algorithm in distributed edge computing mode and follows the following rules when receives a packet:
+
+Algorithm:
+
+If th
