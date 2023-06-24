@@ -6,4 +6,14 @@ We assume that each node participates in a localization procedure (algorithm) at
 
 <img src="Readme_files/Main.png">
 
-Figure-1 Simulation of a Wireless Sensor Network (WSN) with interactive GUI to demonstrate a new Localization algorithm. This Algorithm is used for a Novel Energy Efficient Routing Algorithm https://github.com/hsmazumdar/WSN_Router/tree/main . Initially populate selected number of nodes, with random placement on canvas using 'File' menu of by simply pressing (Cnt+d)
+Figure-1 Simulation of a Wireless Sensor Network (WSN) with interactive GUI to demonstrate a new Localization algorithm. 
+
+This Algorithm is used for a Novel Energy Efficient Routing Algorithm https://github.com/hsmazumdar/WSN_Router/tree/main . Initially populate selected number of nodes, with random placement on canvas using 'File' menu of by simply pressing (Cnt+d)
+
+Quick Start Steps:
+
+Download the zip file and unzip in a folder ‘WSN_Localizer’.
+Select ‘WsnLocalize.py’ file and load in VS Code
+Install necessary library components in VC Code
+Run WsnRoutPwr.py to popup 'WSN Auto Routing' application of figure-1
+Open 'File' menu tab and press 'Draw Nodes (Cnt+d)' tab or press 'Control + d' to populate randomly distributed nodes as shown in figure-1. The default number of nodes are 100 and can be changed using ‘Max Nodes’ tab
