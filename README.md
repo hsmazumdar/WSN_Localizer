@@ -20,9 +20,13 @@ Quick Start Steps:
 7. Press 'File->Save' tab to open save file dialog box, select save file path and enter save file name. Press 'Save' button to save localize list of nodes as follows.
    
 LocalizeHsm.txt,100  =>File Name, Number of nodes
+
 0,16,257,100,0       =>Serial no, x, y, state  
+
 1,20,290,100,0
+
 2,21,231,100,0
+
 .........
 
 
