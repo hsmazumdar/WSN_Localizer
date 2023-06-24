@@ -19,6 +19,10 @@ Quick Start Steps:
 6. Press 'File->Localize' tab or press Cnt+z to localize all nodes as shown in figure-2
 7. Press 'File->Save' tab to open save file dialog box, select save file path and enter save file name. Press 'Save' button to save localize list of nodes as follows.
    
+1. Download the zip file and unzip in a folder ‘WSN_Localizer’.
+2. Select ‘WsnLocalize.py’ file and load in VS Code
+3. Install necessary library components in VC Code
+4. 
 LocalizeHsm.txt,100  =>File Name, Number of nodes
 
 0,16,257,100,0       =>Serial no, x, y, state  
