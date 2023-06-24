@@ -4,7 +4,6 @@ We assume a certain number of WSN nodes, say N, are placed randomly in a plain s
 We assume that each node participates in a localization procedure (algorithm) at regular intervals to generate a list of all nodes N with their node-no, location information x and y using received signal strengths.
 
 
-<img src="Readme_files/Main.png">
 
 Figure-1 Simulation of a Wireless Sensor Network (WSN) with interactive GUI to demonstrate a new Localization algorithm. 
 
