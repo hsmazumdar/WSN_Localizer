@@ -1,6 +1,6 @@
 # WSN_Localizer
 
-We assume a certain number of WSN nodes, say N, are placed randomly in a plain so that each node has at least a few say M minimum neighboring nodes within its transmitting range.
+We assume a certain number of WSN nodes, say N, are placed randomly in a plain so that each node has at least a few say M minimum neighbouring nodes within its transmitting range.
 We assume that each node participates in a localization procedure (algorithm) at regular intervals to generate a list of all nodes N with their node-no, location information x and y using received signal strengths.
 
 <img src="Readme_files/Main.png">
@@ -35,15 +35,18 @@ LocalizeHsm.txt,100  =>File Name, Number of nodes
 
 Figure-2 Simulation demonstrates WSN nodes Localization from initial three nodes of known coordinates connected using red lines. 
 
-The proposed localizing algorithm for the wireless sensor network (WSN), the aim is to estimate the absolute global position (x,y) of all nodes from given position of three initial nodes which are within transmission range to each other. 
-optimize the number of retransmissions in order to save the battery power of the nodes. Each node runs this algorithm in distributed edge computing mode and follows the following rules when receives a packet:
+Using the wireless sensor network (WSN) a localizing algorithm is proposed with the objective of determining the absolute global position (x, y) of all nodes. This algorithm utilizes the positions of three initial nodes that are within transmission range of each other. The primary focus is on optimizing the number of retransmissions to conserve the battery power of the nodes. Each node operates this algorithm in a distributed edge computing mode and adheres to the following rules upon receiving a packet:
 
 Algorithm:
 
-1. Set the status all all the nodes to 0
-2. Set the status of known position nodes to 1
-3. Search 4 nodes such that 3 nodes are with status 1 and 1 node is with status 0, each node being in transmission range of other 3 nodes.
-4. Estimate the 2 set of mirror symetry position coordinates of un-localized node using 2 of the 3 nodes of known coordinates using traingulation method.
-5. Estimate 6 sets of th oordinates of un-localized node using all combination of 3 known coordinate nodes.
-6. Locate common cordinate points in above 6 estimated coordinates and assigne this coordinate to unknown coordinate node. Set its status to 1.
-7. Repeat the process from step 3 until step 3 is unable to find desired set of nodes.
+1. Initialize the status of all nodes as 0.  
+2. Set the status of at least three nodes with known positions to 1.
+3. Search for four nodes, where three nodes have a status of 1 and one node has a status of 0. These nodes should be within transmission range of each other.
+4. Employ the triangulation method to estimate two sets of mirror symmetry position coordinates for the un-localized node using two of the three known coordinate nodes.
+5. Utilize all combinations of three known coordinate nodes to estimate six sets of coordinates for the un-localized node.
+6. Identify the common coordinate points among the six estimated sets and assign these coordinates to the unknown coordinate node. Update its status to 1.
+7. Repeat the process from step 3 until it becomes impossible to find the desired set of nodes.
+8. Localization concludes at the end of step 3.
+
+
+
